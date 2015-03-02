@@ -119,7 +119,7 @@ Delete the `about.html` and `about.js` files and references to each in our `inde
 
 ## Creating New Routes with Yeoman's Angular Generator
 
-We're going to create two new views: 'Work' & 'Play.'
+We're going to create two new routes: 'Work' & 'Play.'
 
 Running a single `angular:route` generator command from our terminal will:
 
