@@ -393,7 +393,7 @@ Finally, we add the hamburger menu w/in our `snap-content` element, like this:
 </snap-dragger>
 ```
 
-While everything is working perfectly, our `snap-content` element has no background color, so you can see the mobile menu behind it. Simply add the following `id` to the `snap-content` element (which is already granted a background color in our .scss file):
+While everything is working perfectly, our `snap-content` element has no background color, so you can see the mobile menu behind it. Simply add the following `id` to the `snap-content` element (which is already granted a background color in our `main.scss` file):
 
 ```
 <snap-content id="mainContentWrapper">
@@ -436,7 +436,7 @@ Followed by:
 grunt wiredep
 ```
 
-In the module function in our `app.js` file, just below our new 'snap' dependency, add the following:
+In the module function in our `app.js` file, just below our new `'snap'` dependency, add the following:
 
 ```
 …
@@ -487,7 +487,7 @@ $scope.data = tabletopData;
 console.log($scope.data);
 ```
 
-You should see the following output in your console:
+You should now see the following output in your console:
 
 ![console](http://i.imgur.com/H0WmNbA.png)
 
@@ -513,7 +513,7 @@ Now, accessing any of our data for display in the view is as simple as:
 
 ```
 <div ng-repeat="data in jsonData">
-  <h1>{{data.name}}</h1>
+  <h1>{{ data.name }}</h1>
 </div>
 ```
 
@@ -529,11 +529,9 @@ Filling out our page w/ all of the data from the Google Spreadsheet:
       <p>This is the main view.</p>
 
       <div ng-repeat="data in jsonData" id='{{$index}}'>
-        <h1>{{data.name}}</h1>
-        <h3>{{data.occupation}}</h3>
-        <p>
-          <a href="{{data.url}}" target="_blank">Wikipedia Page</a>
-        </p>
+        <h1>{{ data.name }}</h1>
+        <h3>{{ data.occupation }}</h3>
+        <p><a href="{{ data.url }}" target="_blank">Wikipedia Page</a></p>
 
         <img ng-src="{{ data.image }}"/>
 
@@ -544,6 +542,8 @@ Filling out our page w/ all of the data from the Google Spreadsheet:
     </div><!-- ./col -->
 
   </div><!-- ./container -->
+
+  <div ng-include="'views/footer.html'"></div>
 
 </div><!-- ./wrapper -->
 ```
@@ -604,11 +604,11 @@ app.controller('WorkCtrl', function($scope, tabletopData) {
   …
 ```
 
-_Note: you can, of course, change the names of the sheets from Google's default 'Sheet,' 'Sheet 2,' etc._
+_Note: you can, of course, change the names of the sheets from Google's default 'Sheet,' 'Sheet 2,' etc. Just be sure to also change their `$scope.data[0].Sheet1.elements` reference in the constructur file._
 
 ### Modularity
 
-We've covered modularity in HTML via our various `view` files and JavaScript via our `controllers`. For CSS, using SASS' `@import` functionality allows multiple developers to break out view-specific styles into their own SCSS files. For example, the opening lines of your `main.scss` file might look like this:
+We've covered modularity in HTML via our individual `view` files and JavaScript via our `controllers`. For CSS, using SASS' `@import` functionality allows developers to break out view-specific styles into their own SCSS files. For example, the opening lines of your `main.scss` file might look like this:
 
 ```
 …
