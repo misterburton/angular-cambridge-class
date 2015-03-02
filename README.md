@@ -576,6 +576,22 @@ Back in our main.html file, we'll use angular's `ng-include` directive to insert
 <div ng-include="'views/footer.html'"></div>
 ```
 
+## An ugly — albeit necessary – hackity hack
+
+Per the tabletop.js site, [Google Spreadsheets can sometimes be slow [or] overwhelmed](https://github.com/jsoma/tabletop#cachingproxying-google-spreadsheets). A fix for this? Simply check to see if our page has loaded and, if not, reload the page to initiate a new call to our spreadsheet:
+
+```
+// make sure our data has loaded, otherwise … it's time for a reeeeeeeeeload!!!
+TweenMax.delayedCall(1.5, dataLoadCheck);
+function dataLoadCheck() {
+  if ($('body').find('.page') == []) {
+    window.location.reload();
+  }
+}
+```
+
+It's ugly as sin, yes. But I can assure you, it works.
+
 ## Final notes
 
 ### Moar pages via moar sheets

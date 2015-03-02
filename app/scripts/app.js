@@ -76,18 +76,14 @@ app.animation('.page', function() {
         element.remove();
         element = null;
       }
-    },
-    move: function(element, done) {},
-    //animation that can be triggered before the class is added
-    beforeAddClass: function(element, className, done) {},
-
-    //animation that can be triggered after the class is added
-    addClass: function(element, className, done) {},
-
-    //animation that can be triggered before the class is removed
-    beforeRemoveClass: function(element, className, done) {},
-
-    //animation that can be triggered after the class is removed
-    removeClass: function(element, className, done) {}
+    }
   };
 });
+
+// make sure our data has loaded, otherwise … it's time for a reeeeeeeeeload!!!
+TweenMax.delayedCall(1.5, dataLoadCheck);
+function dataLoadCheck() {
+  if ($('body').find('.page') == []) {
+    window.location.reload();
+  }
+}
