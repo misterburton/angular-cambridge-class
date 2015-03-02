@@ -604,7 +604,7 @@ app.controller('WorkCtrl', function($scope, tabletopData) {
   …
 ```
 
-_Note: you can, of course, change the names of the sheets from Google's default 'Sheet,' 'Sheet 2,' etc. Just be sure to also change their `$scope.data[0].Sheet1.elements` reference in the constructur file._
+_Note: you can, of course, change the names of the sheets from Google's default 'Sheet,' 'Sheet 2,' etc. Just be sure to also change their `$scope.data[0].Sheet1.elements` reference in the constructor file._
 
 ### Modularity
 
