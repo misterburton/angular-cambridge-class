@@ -596,6 +596,3 @@ grunt serve
 
 That's all, folks.
 
-=======
-# angular-cambridge-class
->>>>>>> 94dbe065cae37fd6c6eb6481c99418aeceb384f7
