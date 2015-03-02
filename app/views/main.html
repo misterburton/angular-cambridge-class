@@ -1,0 +1,28 @@
+<div class="wrapper">
+  
+  <div class="container">
+
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+      <p>This is the main view.</p>
+
+      <div ng-repeat="data in jsonData" id='{{$index}}'>
+        <h1>{{data.name}}</h1>
+        <h3>{{data.occupation}}</h3>
+        <p>
+          <a href="{{data.url}}" target="_blank">Wikipedia Page</a>
+        </p>
+
+        <img ng-src="{{ data.image }}"/>
+
+        <div class="divider"></div>
+
+      </div>
+
+    </div><!-- ./col -->
+
+  </div><!-- ./container -->
+
+  <div ng-include="'views/footer.html'"></div>
+
+</div><!-- ./wrapper -->

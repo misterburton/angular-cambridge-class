@@ -1,0 +1,287 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  color: #666;
+  font-size: 16px;
+  line-height: 140%;
+} 
+
+a, a:hover, a:active {
+  text-decoration: none;
+  -webkit-transition: color .25s ease-out;
+     -moz-transition: color .25s ease-out;
+      -ms-transition: color .25s ease-out;
+       -o-transition: color .25s ease-out;
+          transition: color .25s ease-out;
+}
+
+img {
+  max-width: 100%; /* ensure that images are never larger than their container divs */
+  height: auto; /* maintain images' aspect ratio as they scale */
+}
+
+*:focus { outline: none; }
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+  select:-moz-focusring { color: transparent; } /* remove the dotted outline of select boxes in Firefox */
+  /* [optional] webkit hackery to make things more app-like */
+  -webkit-touch-callout: none;              /* prevent callout to copy image, etc when tap to hold */
+  -moz-touch-callout: none;
+  touch-callout: none;
+  // -moz-user-select: none;
+  // -webkit-user-select: none;
+  // -ms-user-select: none;                 /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper h3, p {
+  line-height: 150%
+}
+
+// the copy needs to breathe, bootstrap!
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//////////////////////////////////////
+/////////// TITLE & HEADER ///////////
+//////////////////////////////////////
+
+header {
+  background-image: url(../images/headerFPO.jpg);
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+      -ms-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-color: #000;
+  -webkit-background-blend-mode: multiply;
+     -moz-background-blend-mode: multiply;
+      -ms-background-blend-mode: multiply;
+       -o-background-blend-mode: multiply;
+          background-blend-mode: multiply;
+}
+
+header, header * {
+  -webkit-transition: background-color .5s ease-out;
+     -moz-transition: background-color .5s ease-out;
+      -ms-transition: background-color .5s ease-out;
+       -o-transition: background-color .5s ease-out;
+          transition: background-color .5s ease-out;
+}
+
+header a, header a:hover, header a:active {
+  color: #FFF;
+}
+
+#titleContainer {
+  color: #FFF;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#titleContainer a, #titleContainer a:hover, #titleContainer a:active {
+  text-decoration: none;
+}
+
+///////////////////////////////////
+/////////// DESKTOP NAV ///////////
+///////////////////////////////////
+
+#desktopNavContainer {
+  padding: 0;
+}
+
+#desktopNav {
+  background-color: #666;
+  padding: 10px 4px 4px 4px;
+  display: none;
+  -webkit-transition: background-color .5s ease-out;
+     -moz-transition: background-color .5s ease-out;
+      -ms-transition: background-color .5s ease-out;
+       -o-transition: background-color .5s ease-out;
+          transition: background-color .5s ease-out;
+}
+
+#desktopNav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#desktopNav ul li {
+  display: inline;
+  padding-right: 15px;
+}
+
+#desktopNav ul li a {
+  text-decoration: none;
+  color: #CCC;
+  -webkit-transition: color .5s ease-out;
+     -moz-transition: color .5s ease-out;
+      -ms-transition: color .5s ease-out;
+       -o-transition: color .5s ease-out;
+          transition: color .5s ease-out;
+}
+
+#desktopNav ul li a:hover, #desktopNav ul li a:active, #desktopNav ul li a:visited {
+  color: #EEE;
+}
+
+#desktopNavList {
+  margin-top: 3px;
+}
+
+///////////////////////////////////
+/////////// MOBILE MENU ///////////
+///////////////////////////////////
+
+#flyoutMenu ul {
+  padding-top: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#flyoutMenu ul li {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#flyoutMenu ul li a {
+  text-decoration: none;
+  color: #AAA;
+  -webkit-transition: color .5s ease-out;
+     -moz-transition: color .5s ease-out;
+      -ms-transition: color .5s ease-out;
+       -o-transition: color .5s ease-out;
+          transition: color .5s ease-out;
+}
+
+#flyoutMenu ul li a:hover, ul li a:active {
+  color: #EEE;
+}
+
+#mainContentWrapper {
+  background-color: #FFF;
+}
+
+#flyoutMenu {
+  background-color: #333;
+  color: #FFF;
+  display: inline;
+  -webkit-transition: background-color .5s ease-out;
+     -moz-transition: background-color .5s ease-out;
+      -ms-transition: background-color .5s ease-out;
+       -o-transition: background-color .5s ease-out;
+          transition: background-color .5s ease-out;
+}
+
+#toggleSnapButton {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  border: 0;
+  background-color: #000;
+  color: #EEE;
+  padding: 4px 10px 4px 10px;
+  font-weight: normal;
+  border-radius: 4px;
+  display: inline;
+  font-size: 20px;
+  -webkit-transition: all .5s ease-out;
+     -moz-transition: all .5s ease-out;
+      -ms-transition: all .5s ease-out;
+       -o-transition: all .5s ease-out;
+          transition: all .5s ease-out;
+}
+
+///////////////////////////////////////
+/////////// PAGES SELECTORS ///////////
+///////////////////////////////////////
+
+// wrap each view in a .wrapper div for transition states
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #EEE;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.footerCopy {
+  padding: 40px 0 20px 15px;
+  font-size: 14px;
+}
+
+/////////////////////////////////////
+/////////// MEDIA QUERIES ///////////
+/////////////////////////////////////
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #flyoutMenu {
+    display: none;
+  }
+
+  #toggleSnapButton {
+    display: none;
+  }
+
+  #desktopNav {
+    display: block;
+  }
+
+  #desktopNav {
+    padding: 9px 4px 4px 40px;
+  }
+
+  #desktopNav ul {
+    // padding-left: 0;
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+  #desktopNav ul {
+    margin-left: -7px;
+  }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  
+
+}
