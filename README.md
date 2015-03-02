@@ -329,11 +329,11 @@ With the transitions now wired up, let's horizontally align each of our pages w/
   
   <div class="container">
 
-  	<div class="col-xs-12 col-md-8 col-md-offset-2">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-  		<p>This is the main view.</p>
+      <p>This is the main view.</p>
 
-		</div><!-- ./col -->
+    </div><!-- ./col -->
 
   </div><!-- ./container -->
 
@@ -563,9 +563,9 @@ Replace the HTML in our new `footer.html` file with the following:
 ```
 <div class="footer">
    <div class="container">
-   		<div class="col-xs-12 col-md-8 col-md-offset-2 footerCopy">
-   		    All Content &copy; Zanzabar Mcfait
-   		</div>
+      <div class="col-xs-12 col-md-8 col-md-offset-2 footerCopy">
+          All Content &copy; Zanzabar Mcfait
+      </div>
    </div>
 </div>
 ```
@@ -578,20 +578,39 @@ Back in our main.html file, we'll use angular's `ng-include` directive to insert
 
 ## Final notes
 
+### Moar pages via moar sheets
+
 Populating data to the other pages of our app is as simple as creating new sheets in the Google spreadsheet. For instance, we would simply create `Sheet 2` for the `work` view and reference its data in the `work.js` controller function via the following:
 
 ```
 app.controller('WorkCtrl', function($scope, tabletopData) {
 
-	$scope.data = tabletopData;
-	$scope.jsonData = $scope.data[0].Sheet1.elements;
-	…
+  $scope.data = tabletopData;
+  $scope.jsonData = $scope.data[0].Sheet1.elements;
+  …
 ```
 
-When all is said & done the following `grunt` command minifies all of your code, optimizes images, etc., and places them into a new, `dist` folder for publishing:
+_Note: you can, of course, change the names of the sheets from Google's default 'Sheet,' 'Sheet 2,' etc._
+
+### Modularity
+
+We've covered modularity in HTML via our various `view` files and JavaScript via our `controllers`. For CSS, using SASS' `@import` functionality allows multiple developers to break out view-specific styles into their own SCSS files. For example, the opening lines of your `main.scss` file might look like this:
 
 ```
-grunt serve
+…
+@import "compass";
+@import "MainStyles.scss";
+@import "WorkStyles.scss";
+@import "PlayStyles.scss";
+…
+```
+
+### Build & Publish
+
+When all is said & done, the following `grunt` command minifies all of your code, optimizes images, etc., and places them into a new, `dist` folder for publishing:
+
+```
+grunt build
 ```
 
 That's all, folks.
