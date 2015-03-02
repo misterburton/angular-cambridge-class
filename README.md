@@ -600,7 +600,7 @@ Populating data to the other pages of our app is as simple as creating new sheet
 app.controller('WorkCtrl', function($scope, tabletopData) {
 
   $scope.data = tabletopData;
-  $scope.jsonData = $scope.data[0].Sheet1.elements;
+  $scope.jsonData = $scope.data[0].Sheet2.elements;
   …
 ```
 
