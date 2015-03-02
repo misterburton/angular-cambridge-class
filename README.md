@@ -145,9 +145,7 @@ If you now take a look in the `index.html` and `app.js` files, you'll see refere
 
 _Now would be a good time to add some CSS. This workshop doesn't cover CSS, so simply replace the contents of `views/main.scss` with those of the following file:_
 
-[CSS for Workshop](https://raw.githubusercontent.com/misterburton/daverast/master/app/styles/main.scss)
-
-TODO: new raw scss link
+[CSS for Workshop](https://raw.githubusercontent.com/misterburton/angular-cambridge-class/master/app/styles/main.scss)
 
 ***
 
