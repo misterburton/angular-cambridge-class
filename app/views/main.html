@@ -7,11 +7,9 @@
       <p>This is the main view.</p>
 
       <div ng-repeat="data in jsonData" id='{{$index}}'>
-        <h1>{{data.name}}</h1>
-        <h3>{{data.occupation}}</h3>
-        <p>
-          <a href="{{data.url}}" target="_blank">Wikipedia Page</a>
-        </p>
+        <h1>{{ data.name }}</h1>
+        <h3>{{ data.occupation }}</h3>
+        <p><a href="{{ data.url }}" target="_blank">Wikipedia Page</a></p>
 
         <img ng-src="{{ data.image }}"/>
 
