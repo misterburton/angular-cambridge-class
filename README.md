@@ -5,6 +5,7 @@ Prerequisite software installs:
 
 * [Sublime Text 2](http://www.sublimetext.com/)
 * [Yeoman, Bower & Grunt](http://yeoman.io/learning/index.html)
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
 
 ## Setup
 
